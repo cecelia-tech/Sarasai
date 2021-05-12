@@ -53,23 +53,25 @@ if (index < 0 || index >= this.list.length) {
     }
 
     public void set(int index, Object o) {
+        if (index < 0 || index >= this.list.length) {
+            return;
+        }
         this.list[index] = o;
 
     }
 
     public void insert(int index, Object o) {
+        // jei index < 0 arba didesnis arba lygus uz esama saraso ilgi - nedaro nieko
         if (index < 0 || index >= this.list.length) {
             return;
         }
-        // jei index < 0 arba didesnis arba lygus uz esama saraso ilgi - nedaro nieko
-        Object [] newO = new Object [this.list.length + 1];
-        Object temp = null;
-        for (int i = 0; i < newO.length; i++) {
-            Object object = newO[i];
-            newO[i] = this.list[i];
-            if (index == i) {
-                temp = this.list[i];
+        Object [] newO = new Object[this.list.length + 1];
+        //Object temp = null;
+        for (int i = 0, j = 0; i < newO.length; i++) {
+            if (i == index) {
                 newO[i] = o;
+            }else{
+            newO[i] = this.list[j++];
             }
             
         }
@@ -94,12 +96,7 @@ if (index < 0 || index >= this.list.length) {
                 s = s  + object + ", ";
                //System.out.println("----------");
                 //System.out.println(s);
-               
             }
             return "{" + s + '}'; 
-        
     }
-
-    
-
 }

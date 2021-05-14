@@ -2,13 +2,12 @@ package sarasai;
 
 public class Sarasai {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         //
         try{
-        MyList ml = new MyList();
+            //MyList ml = new MyList();
+        MyLinekdList ml = new MyLinekdList();
         System.out.println(ml.toString());
         // {}
         System.out.println(ml.size());

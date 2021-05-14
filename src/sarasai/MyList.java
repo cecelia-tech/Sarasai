@@ -27,9 +27,10 @@ public class MyList {
     }
 
     public void remove(int index) {
+        //CIA   
         // jei index < 0 arba didesnis arba lygus uz esama saraso ilgi - nedaro nieko
 if (index < 0 || index >= this.list.length) {
-            return;
+            throw new NaujaKlaida ("Nurodytas index nagali buti mazesnis uz 0 arba didesnis uz saraso ilgi");
         }
         Object [] newArr = new Object[this.list.length-1];
         /**/
@@ -44,9 +45,10 @@ if (index < 0 || index >= this.list.length) {
     }
 
     public Object get(int index) {
+        //CIA
         // cia dar reikia pataisyt
         if (index < 0 || index > this.list.length - 1) {
-            return null;
+            throw new NaujaKlaida("Nurodytas index nagali buti mazesnis uz 0 arba didesnis uz saraso ilgi");
         }
        
         return this.list[index];
@@ -54,16 +56,17 @@ if (index < 0 || index >= this.list.length) {
 
     public void set(int index, Object o) {
         if (index < 0 || index >= this.list.length) {
-            return;
+            throw new NaujaKlaida("Nurodytas index nagali buti mazesnis uz 0 arba didesnis uz saraso ilgi");
         }
         this.list[index] = o;
 
     }
 
     public void insert(int index, Object o) {
+        //CIA
         // jei index < 0 arba didesnis arba lygus uz esama saraso ilgi - nedaro nieko
         if (index < 0 || index >= this.list.length) {
-            return;
+            throw new NaujaKlaida("Index negali buti mazesnis uz 0 arba didesnis nei masyvo ilgis");
         }
         Object [] newO = new Object[this.list.length + 1];
         //Object temp = null;

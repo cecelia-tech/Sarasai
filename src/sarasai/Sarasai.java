@@ -7,6 +7,7 @@ public class Sarasai {
      */
     public static void main(String[] args) {
         //
+        try{
         MyList ml = new MyList();
         System.out.println(ml.toString());
         // {}
@@ -71,6 +72,11 @@ public class Sarasai {
         // 4
         System.out.println(ml.get(2));
         // pries trecia
+        }
+        catch (NaujaKlaida nk){
+            System.out.println("Pagavau NaujaKlaida" + nk.getClass().getName() + nk.getMessage());
+            nk.printStackTrace();
+        }
     }
     
 }
@@ -92,6 +98,15 @@ String toString();
 
 ***
 void insert(int index, Object o);
+*/
 
+/*
+susikrti unchecked klaidos klase
+
+ 
+
+ir metoduose remove, insert, get throw'inti klaida
+
+ 
 
 */

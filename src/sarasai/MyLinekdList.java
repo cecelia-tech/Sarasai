@@ -48,41 +48,6 @@ public class MyLinekdList {
         }
         previous.next = previous.next.next;
         }
-      //  Node newNode = new Node();
-        //int count = 0;
-      /*  int i = 0;
-           Node parent = this.head;
-            Node m = this.head;
-              while (m.next != null) {
-                 
-                 if (i == index) {
-                    
-                m.value = parent.next.value;
-               // continue;
-            }else{
-                m = parent.next;
-                }
-                 i++;
-            }
-              this.head = m;
-           
-            for (int i = 0; i < size(); i++) {
-                //System.out.println("======");
-                //System.out.println(size());
-                //System.out.println("======");
-           if (i == index) {
-              // System.out.println("pp");
-                 parent = parent.next;
-                //i++;
-              // continue;
-            }
-//           else{
-//                m = parent.next;
-//           }
-           
-        }*/
-        
-             
     }
 
  

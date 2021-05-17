@@ -5,7 +5,7 @@ public class Sarasai {
     
     public static void main(String[] args) {
         //
-        try{
+        
             //MyList ml = new MyList();
         MyLinekdList ml = new MyLinekdList();
         System.out.println(ml.toString());
@@ -35,9 +35,20 @@ public class Sarasai {
         // pirmas
         System.out.println(ml.get(2));
         // trecias
+        /*
+        
+        
+        try{
         System.out.println(ml.get(-3));
+        } catch (IndexOutOfBoundsException e) {
+        //ignored    pagauna klaida, bet ignoruoja
+        }
         // null
+         try{
         System.out.println(ml.get(3));
+        } catch (IndexOutOfBoundsException e) {
+        //ignored    pagauna klaida, bet ignoruoja
+        }*/
         // null
         
         ml.set(1, "kitas antras");
@@ -71,11 +82,13 @@ public class Sarasai {
         // 4
         System.out.println(ml.get(2));
         // pries trecia
-        }
+       // }
+        /*
+        
         catch (NaujaKlaida nk){
             System.out.println("Pagavau NaujaKlaida" + nk.getClass().getName() + nk.getMessage());
             nk.printStackTrace();
-        }
+        } */
     }
     
 }
